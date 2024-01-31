@@ -17,16 +17,16 @@ The code has been tested on pytorch=1.8.0 and python 3.7, please refer to `requi
 
 ├─FaceForensics++
 │  ├─test
-│  │  ├─fake
-│  │  │  ├─video_1
-│  │  │  ├─video_2
+│     ├─fake
+│     │  ├─video_1
+│     │  ├─video_2
+│     │  ├─.....
+│     │  ├─video_n
+│     ├─real
+│     │  ├─video_1
+│     │  ├─video_2
 │  │  │  ├─.....
-│  │  │  ├─video_n
-│  │  ├─real
-│  │  │  ├─video_1
-│  │  │  ├─video_2
-│  │  │  ├─.....
-│  │  │  ├─video_n
+│     │  ├─video_n
 ├─train
 │  │  ├─fake
 │  │  │  ├─video_1
@@ -38,9 +38,47 @@ The code has been tested on pytorch=1.8.0 and python 3.7, please refer to `requi
 │  │  │  ├─video_2
 │  │  │  ├─.....
 │  │  │  ├─video_n
-└─
+
+
+
+datasets
+├── augment_deepfake        (2)
+│   ├── fake
+│   │   └── frames
+│   ├── real
+│   │   └── frames
+│   └── val
+│       ├── fake
+│       └── real
+├── base_deepfake           (1)
+│   ├── fake
+│   │   └── frames
+│   ├── real
+│   │   └── frames
+│   └── val
+│       ├── fake
+│       └── real
+├── both_deepfake           (3)
+│   ├── fake
+│   │   └── frames
+│   ├── real
+│   │   └── frames
+│   └── val
+│       ├── fake
+│       └── real
+├── precomputed             (4)
+└── T_deepfake              (0)
+    ├── manipulated_sequences
+    │   ├── DeepFakeDetection
+    │   ├── Deepfakes
+    │   ├── Face2Face
+    │   ├── FaceSwap
+    │   └── NeuralTextures
+    └── original_sequences
+        ├── actors
+        └── youtube
 ## Pretrained Model
-we provide some [pretrained model](https://drive.google.com/drive/folders/1GNtk3hLq6sUGZCGx8fFttvyNYH8nrQS8?usp=sharing) based on FaceForensics++
+we provide some [pretrained model](https://pan.baidu.com/s/16HvIPHeEm8EF2KphnCOebw) based on FaceForensics++
 
 
 ## Usage
