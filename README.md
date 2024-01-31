@@ -6,7 +6,7 @@ Abstract—With the continuous development of Generative models on face generati
 
 ### The framework of our proposed method
 
-![image]([https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png](https://github.com/ziminMIAO/sunsun91/blob/main/model.png?raw=true))
+![image](https://github.com/ziminMIAO/sunsun91/blob/main/model.png)
 
 
 ## Install & Requirements
