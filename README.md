@@ -82,7 +82,7 @@ datasets
         ├── actors
         └── youtube
 ## Pretrained Model
-we provide some [pretrained model](https://pan.baidu.com/s/16HvIPHeEm8EF2KphnCOebw) (code:lasy)based on FaceForensics++. And we also provide a [Google Drive link](https://pan.baidu.com/s/16HvIPHeEm8EF2KphnCOebw).
+we provide some [pretrained model](https://pan.baidu.com/s/16HvIPHeEm8EF2KphnCOebw) (code:lasy) based on FaceForensics++. And we also provide a [Google Drive link](https://drive.google.com/drive/folders/10nCo5M-c9zhB8PBaWqzRwMq3ITqCd7am?usp=drive_link).
 
 
 ## Usage
