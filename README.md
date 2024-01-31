@@ -19,68 +19,88 @@ The code has been tested on pytorch=1.8.0 and python 3.7, please refer to `requi
 1.In our experiment we use FaceForensics++, WildDeepfake,CelebDF and DFDCP datasets for evaluation.
 2.Please divide the video into groups of 32 frames each and put them in the correct path as following.
 
-├─FaceForensics++
-│  ├─test
-│     ├─fake
-│     │  ├─video_1
-│     │  ├─video_2
-│     │  ├─.....
-│     │  ├─video_n
-│     ├─real
-│     │  ├─video_1
-│     │  ├─video_2
-│  │  │  ├─.....
-│     │  ├─video_n
-├─train
-│  │  ├─fake
-│  │  │  ├─video_1
-│  │  │  ├─video_2
-│  │  │  ├─.....
-│  │  │  ├─video_n
-│  │  ├─real
-│  │  │  ├─video_1
-│  │  │  ├─video_2
-│  │  │  ├─.....
-│  │  │  ├─video_n
-
-
-
-datasets
-├── augment_deepfake        (2)
-│   ├── fake
-│   │   └── frames
-│   ├── real
-│   │   └── frames
-│   └── val
-│       ├── fake
-│       └── real
-├── base_deepfake           (1)
-│   ├── fake
-│   │   └── frames
-│   ├── real
-│   │   └── frames
-│   └── val
-│       ├── fake
-│       └── real
-├── both_deepfake           (3)
-│   ├── fake
-│   │   └── frames
-│   ├── real
-│   │   └── frames
-│   └── val
-│       ├── fake
-│       └── real
-├── precomputed             (4)
-└── T_deepfake              (0)
-    ├── manipulated_sequences
-    │   ├── DeepFakeDetection
-    │   ├── Deepfakes
-    │   ├── Face2Face
-    │   ├── FaceSwap
-    │   └── NeuralTextures
-    └── original_sequences
-        ├── actors
-        └── youtube
+├── test
+│   ├── fakeff
+│   │   ├── Deepfakes
+│   │   │   └── 000_003_0
+│   │   │       ├── 0_0.jpg
+│   │   │       ├── 10_0.jpg
+│   │   │       ├── 1_0.jpg
+│   │   │       ├── 11_0.jpg
+│   │   │       ├── 12_0.jpg
+│   │   │       ├── 13_0.jpg
+│   │   │       ├── 14_0.jpg
+│   │   │       ├── 15_0.jpg
+│   │   │       ├── 16_0.jpg
+│   │   │       ├── 17_0.jpg
+│   │   │       ├── 18_0.jpg
+│   │   │       ├── 19_0.jpg
+│   │   │       ├── 20_0.jpg
+│   │   │       ├── 2_0.jpg
+│   │   │       ├── 21_0.jpg
+│   │   │       ├── 22_0.jpg
+│   │   │       ├── 23_0.jpg
+│   │   │       ├── 24_0.jpg
+│   │   │       ├── 25_0.jpg
+│   │   │       ├── 26_0.jpg
+│   │   │       ├── 27_0.jpg
+│   │   │       ├── 28_0.jpg
+│   │   │       ├── 29_0.jpg
+│   │   │       ├── 30_0.jpg
+│   │   │       ├── 3_0.jpg
+│   │   │       ├── 31_0.jpg
+│   │   │       ├── 4_0.jpg
+│   │   │       ├── 5_0.jpg
+│   │   │       ├── 6_0.jpg
+│   │   │       ├── 7_0.jpg
+│   │   │       ├── 8_0.jpg
+│   │   │       └── 9_0.jpg
+│   │   ├── Face2Face
+│   │   ├── FaceSwap
+│   │   └── NeuralTextures
+│   └── realff
+│       └── REALFF
+└── train
+    ├── fakeff
+    │   ├── Deepfakes
+    │   │   └── 000_003_0
+    │   │       ├── 0_0.jpg
+    │   │       ├── 10_0.jpg
+    │   │       ├── 1_0.jpg
+    │   │       ├── 11_0.jpg
+    │   │       ├── 12_0.jpg
+    │   │       ├── 13_0.jpg
+    │   │       ├── 14_0.jpg
+    │   │       ├── 15_0.jpg
+    │   │       ├── 16_0.jpg
+    │   │       ├── 17_0.jpg
+    │   │       ├── 18_0.jpg
+    │   │       ├── 19_0.jpg
+    │   │       ├── 20_0.jpg
+    │   │       ├── 2_0.jpg
+    │   │       ├── 21_0.jpg
+    │   │       ├── 22_0.jpg
+    │   │       ├── 23_0.jpg
+    │   │       ├── 24_0.jpg
+    │   │       ├── 25_0.jpg
+    │   │       ├── 26_0.jpg
+    │   │       ├── 27_0.jpg
+    │   │       ├── 28_0.jpg
+    │   │       ├── 29_0.jpg
+    │   │       ├── 30_0.jpg
+    │   │       ├── 3_0.jpg
+    │   │       ├── 31_0.jpg
+    │   │       ├── 4_0.jpg
+    │   │       ├── 5_0.jpg
+    │   │       ├── 6_0.jpg
+    │   │       ├── 7_0.jpg
+    │   │       ├── 8_0.jpg
+    │   │       └── 9_0.jpg
+    │   ├── Face2Face
+    │   ├── FaceSwap
+    │   └── NeuralTextures
+    └── realff
+        └── REALFF
 ## Pretrained Model
 we provide some [pretrained model](https://pan.baidu.com/s/16HvIPHeEm8EF2KphnCOebw) (code:lasy) based on FaceForensics++. And we also provide a [Google Drive link](https://drive.google.com/drive/folders/10nCo5M-c9zhB8PBaWqzRwMq3ITqCd7am?usp=drive_link).
 
